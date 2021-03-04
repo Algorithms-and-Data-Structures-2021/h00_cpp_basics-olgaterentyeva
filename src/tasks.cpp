@@ -95,6 +95,7 @@ vector<int> find_odd_numbers(vector<int> &arr) {
         if (i % 2 == 1 && i > 0) odd_numbers.push_back(i);
     }
     return odd_numbers;
+
 }
 
 
