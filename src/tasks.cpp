@@ -73,6 +73,7 @@ void reverse_1d_array(int *arr_begin, int *arr_end) {
     }
 }
 
+
 // Задание 6
 int *find_max_element(int *arr, int size) {
     if (arr != nullptr && size > 0) {
@@ -90,15 +91,18 @@ int *find_max_element(int *arr, int size) {
 
 // Задание 7
 vector<int> find_odd_numbers(vector<int> &arr) {
-    vector<int> odd_numbers;
-    for (int &i : arr) {
-        if (i % 2 == 1 && i > 0) odd_numbers.push_back(i);
+
+    vector<int> result;
+    for (int el : arr) {
+        if (el % 2 != 0) {
+            result.push_back(el);
+        }
     }
-    return odd_numbers;
-
+    if (arr.empty()) {
+        return {};
+    }
+    return result;
 }
-
-
 
 // Задание 8
 vector<int> find_common_elements(vector<int> &arr_a, vector<int> &arr_b) {
